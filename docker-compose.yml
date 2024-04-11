@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+ app:
+  container_name: sugarhouse-checklistCamaras
+  build:
+   args:
+    user: laravel
+    uid: 2000
+   context: ./
+  restart: unless-stopped
+  tty: true
+  volumes:
+   - ./:/var/www/html
+  ports:
+   - "8000:80"
+
