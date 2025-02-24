@@ -1,11 +1,11 @@
-version: "3.9"
+version: "3.3"
 services:
  app:
-  container_name: sugarhouse-checklistCamaras
+  container_name: checklistcamaras_app 
   build:
    args:
     user: laravel
-    uid: 2000
+    uid: 1000
    context: ./
   restart: unless-stopped
   tty: true

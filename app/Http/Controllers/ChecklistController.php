@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 
 class ChecklistController extends Controller
 {
+    public function checklist_list()
+    {
+        $checklist = ChecklistModel::all();
+        return view('checklist_list', compact('checklist'));
+    }
+
     public function checklist()
     {
         return view('checklist');

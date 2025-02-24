@@ -19,6 +19,7 @@ use App\Http\Controllers\ChecklistController;
 Route::get('/', function () { return redirect()->route('home');});
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 
+Route::get('/checklist/list', [ChecklistController::class, 'checklist_list'])->name('checklist_list');
 Route::get('/checklist', [ChecklistController::class, 'checklist'])->name('checklist');
 Route::get('/checklist/details/{id}', [ChecklistController::class, 'checklist_details'])->name('checklist_details');
 Route::post('/checklist', [ChecklistController::class, 'checklist_store'])->name('checklist_store');

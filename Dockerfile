@@ -24,8 +24,3 @@ RUN mkdir -p /home/$user/.composer && chown -R $user:$user /home/$user
 WORKDIR /var/www/html
 
 USER $user
-
-
-
-
-
