@@ -6,16 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Checklist</title>
+    <link href="{{asset('/css/btn.css')}}" rel="stylesheet"> 
+    <title>@yield('title')</title>
 </head>
 <body>
 
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="{{route('home')}}"><i style="font-size: 1.8rem;" class="bi bi-arrow-left-square"></i></a>
+    <nav class="navbar navbar-light bg-primary">
+        <div class="container-fluid" style="color: white; font-size: 24px;">
+            <a class="boton-outline" href="{{route('home')}}" style="color:white; text-decoration:none;"><i class="bi bi-caret-left" style="color:white;"></i> Regresar</a>     
         </div>
     </nav>
-
+    
     <h3 style="padding-left:0.5rem; padding-top: 1rem;">Checklist de cámaras</h3>
 
     <form action="{{route('checklist_store')}}" method="POST" enctype="multipart/form-data">
